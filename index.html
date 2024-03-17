@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tousiq kashif Portfolio</title>
+    <link rel="stylesheet" styles href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c31afcb1cd.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <nav>
+          <div class="profile" id="profile">
+            <img src="images/Untitled-1.png" alt="My Photo" />
+          </div>
+          <name><h2 style="color: white" id="name">Tousiq Kashif</h2></name>
+          <button onclick="menu()" id="show">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <button onclick="cut()" id="cut">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <menu id="men">
+            <ul>
+              <li id="Home" onclick="HomeScreen()"><a>Home</a></li>
+              <li id="About" onclick="aboutUs()"><a>About Us</a></li>
+              <li id="project" onclick="project()"><a href="#">Project</a></li>
+              <li id="Skills" onclick="Skillo()"><a href="#">Skills</a></li>
+              <li id="Down" onclick="dawn()"><a href="#">Resume / CV</a></li>
+            </ul>
+          </menu>
+        </nav>
+        <div class="content">
+          <div class="content-row" id="content">
+            <h1>
+              Welcome to my Home Page! <br />
+              Hello my name Tousiq
+            </h1>
+            <h2>
+              Crafting dynamic web experiences with HTML, CSS, and JavaScript,
+              coupled with PHP expertise and Bootstrap finesse. Let's build your
+              digital vision together.z
+            </h2>
+
+            <div class="icons" id="icons">
+              <ul style="list-style: none; font-size: 25px">
+                <li>
+                  <h3>
+                    <a href="https://github.com/tousiqkashif"
+                      ><i class="fa-brands fa-github"></i
+                    ></a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a
+                      href="https://www.linkedin.com/in/tousiq-kashif-564b92223/"
+                      ><i class="fa-brands fa-linkedin"></i
+                    ></a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                  </h3>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="Script.js"></script>
+  </body>
+</html>

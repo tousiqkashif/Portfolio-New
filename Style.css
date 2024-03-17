@@ -1,0 +1,279 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.content progress {
+  width: 300px;
+  height: 40px;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5d416;
+}
+
+.row {
+  display: flex;
+  flex-basis: 85%;
+  height: 80vh;
+
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.253);
+}
+
+nav {
+  display: flex;
+  flex-basis: 20%;
+  flex-direction: column;
+  background-color: black;
+  justify-content: space-evenly;
+  align-items: center;
+  @media screen and (max-width: 600px) {
+    flex-direction: row;
+  }
+}
+#show,
+#cut {
+  display: none;
+}
+.profile {
+  background-color: #0099ff;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  @media screen and (max-width: 600px) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  offset-block-start: 0%;
+  border-radius: 100%;
+  border: 5px solid white;
+  object-position: top;
+}
+menu {
+  @media screen and (max-width: 600px) {
+    display: block;
+  }
+}
+
+menu ul li {
+  list-style-type: none;
+  padding: 10px 90px;
+  transition: 0.5s ease;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+menu ul li:hover {
+  background-color: #61c0fc;
+}
+
+ul a {
+  text-decoration: none;
+  color: white;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 80%;
+  background: url(images/bg2.jpg);
+  background-size: cover;
+  object-fit: fit;
+}
+.content-row {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  justify-content: space-around;
+  flex-basis: 70%;
+
+  color: white;
+  h1 {
+    font-size: 45px;
+    @media screen and (max-width: 600px) {
+      font-size: 30px;
+    }
+    h2,
+    h3,
+    p {
+      @media screen and (max-width: 600px) {
+        font-size: 10px;
+      }
+    }
+  }
+
+  .icons ul {
+    list-style: none;
+    font-size: 25px;
+  }
+  .icons ul li {
+    float: left;
+    transition: 0.2s;
+    padding: 0px 0px;
+    padding-right: 20px;
+  }
+
+  .icons ul li:hover {
+    font-size: 30px;
+  }
+  .icons ul li:nth-child(2),
+  .icons ul li:nth-child(3),
+  .icons ul li:nth-child(4) {
+    padding: 0px 20px;
+  }
+}
+.content button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: black;
+  color: white;
+  transition: 0.5s ease;
+}
+.content button:hover {
+  background-color: #61c0fc;
+}
+.content button a {
+  text-decoration: none;
+  color: white;
+}
+
+#Down {
+  width: 300px;
+}
+
+@media screen and (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+  #show {
+    display: block;
+  }
+  nav i {
+    padding: 20px;
+    font-size: 20px;
+  }
+  menu {
+    display: none;
+  }
+  menu ul li {
+    padding: 5px;
+  }
+  #cut {
+    display: none;
+  }
+  .content h1 {
+    font-size: 15px;
+  }
+  .content h2 {
+    font-size: 12px;
+  }
+  .content h3 {
+    font-size: 10px;
+  }
+  .content .icons {
+    font-size: 10px;
+  }
+  .content p {
+    font-size: 10px;
+  }
+  .menu {
+    width: 100px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* .projects-new {
+  background-color: #f5d416;
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
+
+  .projects-row {
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .project {
+    width: 400px;
+    height: 350px;
+    background-color: crimson;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .overlay {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        rgba(255, 255, 255, 0.137),
+        rgba(0, 0, 0, 0.473)
+      );
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 25px 15px;
+      text-decoration: none;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      opacity: 0;
+      transition: 0.3s ease all;
+
+      > .title {
+        font-weight: 600;
+        color: white;
+        margin-bottom: 5px;
+      }
+
+      .desc {
+        color: white;
+      }
+
+      .stack-row {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+
+        > p {
+          border: 1px solid white;
+          color: white;
+          padding: 8px 16px;
+          border-radius: 2px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .project:hover .overlay {
+    opacity: 1;
+  }
+} */
